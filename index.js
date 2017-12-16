@@ -62,8 +62,19 @@ function viewCart() {
     return sum;
   }
 
+
 function removeFromCart(item) {
-  // write your code here
+   for (var i = 0; i < cart.length; i++) {
+     if (cart[i].hasOwnProperty(item)) {
+       cart.splice(i, 1);
+       return cart;
+     }
+     return;
+    }
+  
+   
+   console.log("That item is not in your cart.");
+  
 }
 
 function placeOrder(cardNumber) {
